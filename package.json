@@ -1,5 +1,5 @@
 {
-  "name": "Gojo-Satoru",
+  "name": "ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ",
   "version": "2.0.0",
   "description": "WhatsApp Using Lib Baileys Multi Device",
   "main": "index.js",
@@ -11,14 +11,14 @@
     "termux",
     "whatsapp",
     "2022",
-    "GojoSatoru",
+    "ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ",
     "base",
     "baileys-md",
     "bot",
     "bot-md",
     "multi-device"
   ],
-  "author": "NexusNw",
+  "author": "ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ",
   "license": "MIT",
   "dependencies": {
     "@adiwajshing/baileys": "^4.0.1",
@@ -64,10 +64,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nexusNw/Gojo-Satoru.git"
+    "url": "https://telegra.ph/file/1c3146d59fc4c6c65dde8.jpg"
   },
   "bugs": {
-    "url": "https://github.com/nexusNw/Gojo-Satoru/issues"
+    "url": "https://telegra.ph/file/1c3146d59fc4c6c65dde8.jpg"
   },
-  "homepage": "https://github.com/nexusNw/Gojo-Satoru#readme"
+  "homepage": "https://telegra.ph/file/1c3146d59fc4c6c65dde8.jpg"
 }
