@@ -1,6 +1,6 @@
 //═══════════════════════════════════════════════════════//
 //
-//                              𝙶𝙾𝙹𝙾-𝚂𝙰𝚃𝙾𝚁𝚄 𝓫𝔂 𝓷𝓮𝔁𝓾𝓼𝓝𝔀
+//                              𝙶𝙾𝙹𝙾-𝚂𝙰𝚃𝙾𝚁𝚄 ʙʏ ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ
 //𝙰𝙳𝙾𝙿𝚃𝙴𝙳 𝙵𝚁𝙾𝙼  𝚂𝙲𝚁𝙸𝙿𝚃 𝙾𝙵 𝙲𝙷𝙴𝙴𝙼𝚂𝙱𝙾𝚃 𝚅2 𝙱𝚈 𝙳𝙶𝚇𝚎𝚘𝚗 
 //
 //════════════════════════════//
@@ -112,28 +112,28 @@ async function startGojoMdNx() {
        } else if (pea[0].restrict == false) {
        GojoMdNx.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, `Group Settings Change Message`, wm_fatih, [])
        } else {
-       GojoMdNx.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, `Group Settings Change Message`, wm_fatih, [])
+       ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, `Group Settings Change Message`, wm_fatih, [])
      }
     })
 
-    GojoMdNx.ev.on('group-participants.update', async (anu) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.ev.on('group-participants.update', async (anu) => {
         console.log(anu)
         try {
-            let metadata = await GojoMdNx.groupMetadata(anu.id)
+            let metadata = await ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.groupMetadata(anu.id)
             let participants = anu.participants
             for (let num of participants) {
                 // Get Profile Picture User
                 try {
-                    ppuser = await GojoMdNx.profilePictureUrl(num, 'image')
+                    ppuser = await ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.profilePictureUrl(num, 'image')
                 } catch {
-                    ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                    ppuser = 'https://telegra.ph/file/1c3146d59fc4c6c65dde8.jpg'
                 }
 
                 //Get Profile Picture Group\\
                 try {
                     ppgroup = await GojoMdNx.profilePictureUrl(anu.id, 'image')
                 } catch {
-                    ppgroup = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                    ppgroup = 'https://telegra.ph/file/1c3146d59fc4c6c65dde8.jpg'
                 }
 
 //welcome\\
@@ -178,7 +178,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
         }
     })
 
-    GojoMdNx.getName = (jid, withoutContact  = false) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.getName = (jid, withoutContact  = false) => {
         id = GojoMdNx.decodeJid(jid)
         withoutContact = GojoMdNx.withoutContact || withoutContact 
         let v
@@ -190,8 +190,8 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
         else v = id === '0@s.whatsapp.net' ? {
             id,
             name: 'WhatsApp'
-        } : id === GojoMdNx.decodeJid(GojoMdNx.user.id) ?
-            GojoMdNx.user :
+        } : id === ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.decodeJid(GojoMdNx.user.id) ?
+            ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.user :
             (store.contacts[id] || {})
             return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
     }
@@ -207,7 +207,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 	GojoMdNx.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
     }
     
-    GojoMdNx.setStatus = (status) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.setStatus = (status) => {
         GojoMdNx.query({
             tag: 'iq',
             attrs: {
@@ -224,11 +224,11 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
         return status
     }
 	
-    GojoMdNx.public = true
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.public = true
 
-    GojoMdNx.serializeM = (m) => smsg(GojoMdNx, m, store)
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.serializeM = (m) => smsg(ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ, m, store)
 
-    GojoMdNx.ev.on('connection.update', async (update) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.ev.on('connection.update', async (update) => {
         const { connection, lastDisconnect } = update	    
         if (connection === 'close') {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
@@ -244,7 +244,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
         console.log('Connected...', update)
     })
 
-    GojoMdNx.ev.on('creds.update', saveState)
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.ev.on('creds.update', saveState)
 
     // Add Other
     /** Send Button 5 Image
@@ -257,7 +257,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
      * @param {*} options
      * @returns
      */
-    GojoMdNx.send5ButImg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.send5ButImg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
         let message = await prepareWAMessageMedia({ image: img }, { upload: GojoMdNx.waUploadToServer })
         var template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
         templateMessage: {
@@ -281,7 +281,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
      * @param {*} quoted 
      * @param {*} options 
      */
-    GojoMdNx.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
         let buttonMessage = {
             text,
             footer,
@@ -289,7 +289,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
             headerType: 2,
             ...options
         }
-        GojoMdNx.sendMessage(jid, buttonMessage, { quoted, ...options })
+        ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.sendMessage(jid, buttonMessage, { quoted, ...options })
     }
     
     /**
@@ -300,7 +300,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
      * @param {*} options 
      * @returns 
      */
-    GojoMdNx.sendText = (jid, text, quoted = '', options) => GojoMdNx.sendMessage(jid, { text: text, ...options }, { quoted })
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.sendText = (jid, text, quoted = '', options) => GojoMdNx.sendMessage(jid, { text: text, ...options }, { quoted })
 
     /**
      * 
@@ -311,7 +311,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
      * @param {*} options 
      * @returns 
      */
-    GojoMdNx.sendImage = async (jid, path, caption = '', quoted = '', options) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.sendImage = async (jid, path, caption = '', quoted = '', options) => {
 	let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         return await GojoMdNx.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
     }
@@ -325,7 +325,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
      * @param {*} options 
      * @returns 
      */
-    GojoMdNx.sendVideo = async (jid, path, caption = '', quoted = '', gif = false, options) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.sendVideo = async (jid, path, caption = '', quoted = '', gif = false, options) => {
         let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         return await GojoMdNx.sendMessage(jid, { video: buffer, caption: caption, gifPlayback: gif, ...options }, { quoted })
     }
@@ -339,7 +339,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
      * @param {*} options 
      * @returns 
      */
-    GojoMdNx.sendAudio = async (jid, path, quoted = '', ptt = false, options) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.sendAudio = async (jid, path, quoted = '', ptt = false, options) => {
         let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         return await GojoMdNx.sendMessage(jid, { audio: buffer, ptt: ptt, ...options }, { quoted })
     }
@@ -352,7 +352,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
      * @param {*} options 
      * @returns 
      */
-    GojoMdNx.sendTextWithMentions = async (jid, text, quoted, options = {}) => GojoMdNx.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.sendTextWithMentions = async (jid, text, quoted, options = {}) => GojoMdNx.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
 
     /**
      * 
@@ -362,7 +362,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
      * @param {*} options 
      * @returns 
      */
-    GojoMdNx.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         let buffer
         if (options && (options.packname || options.author)) {
@@ -371,7 +371,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
             buffer = await imageToWebp(buff)
         }
 
-        await GojoMdNx.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
+        await ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
         return buffer
     }
 
@@ -383,7 +383,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
      * @param {*} options 
      * @returns 
      */
-    GojoMdNx.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         let buffer
         if (options && (options.packname || options.author)) {
@@ -392,7 +392,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
             buffer = await videoToWebp(buff)
         }
 
-        await GojoMdNx.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
+        await ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
         return buffer
     }
 	
@@ -403,7 +403,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
      * @param {*} attachExtension 
      * @returns 
      */
-    GojoMdNx.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
         let quoted = message.msg ? message.msg : message
         let mime = (message.msg || message).mimetype || ''
         let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
@@ -419,7 +419,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
         return trueFileName
     }
 
-    GojoMdNx.downloadMediaMessage = async (message) => {
+    ꪶᴄʜʀͥɪsᷧᴛᷟʏ͢ sᴇʀꫂ.downloadMediaMessage = async (message) => {
         let mime = (message.msg || message).mimetype || ''
         let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
         const stream = await downloadContentFromMessage(message, messageType)
